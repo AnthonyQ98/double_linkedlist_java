@@ -1,10 +1,10 @@
 package linkedlistimplementation;
 
-public class DLNode {
-    private DLNode next, prev;
+public class DLNode<T> {
+    private DLNode<T> next, prev;
     private Object element;
 
-    public DLNode(Object element, DLNode next, DLNode prev) {
+    public DLNode(T element, DLNode<T> next, DLNode<T> prev) {
         this.element = element;
         this.next = next;
         this.prev = prev;
@@ -15,11 +15,11 @@ public class DLNode {
         this.element = element;
     }
 
-    public void setNext(DLNode next) {
+    public void setNext(DLNode<T> next) {
         this.next = next;
     }
 
-    public void setPrev(DLNode prev) {
+    public void setPrev(DLNode<T> prev) {
         this.prev = prev;
     }
 
@@ -28,11 +28,11 @@ public class DLNode {
         return this.element;
     }
 
-    public DLNode getNext() {
+    public DLNode<T> getNext() {
         return this.next;
     }
 
-    public DLNode getPrev() {
+    public DLNode<T> getPrev() {
         return this.prev;
     }
 }
